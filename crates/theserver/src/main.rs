@@ -43,15 +43,14 @@ async fn main() -> anyhow::Result<()> {
 }
 
 #[instrument]
-async fn handle_is_prime(n: Path<u64>) -> &'static str {
-    if thelib::is_prime(n.0) {
-        "true"
-    } else {
-        "false"
-    }
+async fn handle_is_prime(Path(n): Path<u64>) -> &'static str {
+    let is_prime = tokio::task::spawn_blocking(move || thelib::is_prime(n))
+        .await
+        .expect("we can always spawn task");
+    if is_prime { "true" } else { "false" }
 }
 
 #[instrument]
-async fn handle_next_prime(n: Path<u64>) -> String {
-    thelib::next_prime(n.0).to_string()
+async fn handle_next_prime(Path(n): Path<u64>) -> String {
+    thelib::next_prime(n).to_string()
 }

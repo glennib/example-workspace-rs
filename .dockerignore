@@ -1,0 +1,5 @@
+**/.git*
+**/target/
+README.md
+rustfmt.toml
+**/*.dockerfile
