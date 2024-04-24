@@ -721,6 +721,19 @@ name = "thelib"
 version = "0.1.0"
 
 [[package]]
+name = "theotherserver"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "axum",
+ "clap",
+ "thelib",
+ "tokio",
+ "tracing",
+ "tracing-subscriber",
+]
+
+[[package]]
 name = "theserver"
 version = "0.1.0"
 dependencies = [
