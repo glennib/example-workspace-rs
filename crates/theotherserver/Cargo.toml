@@ -11,7 +11,7 @@ license = "Unlicense"
 anyhow = "1.0.82"
 axum = "0.7.5"
 clap = { version = "4.5.4", features = ["derive"] }
-thelib = { package = "glennib-thelib", version = "0.1.1", path = "../thelib" }
+thelib = { package = "glennib-thelib", version = "0.1.2", path = "../thelib" }
 tokio = { version = "1.37.0", features = ["full"] }
 tracing = "0.1.40"
 tracing-subscriber = "0.3.18"
