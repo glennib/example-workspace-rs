@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.3](https://github.com/glennib/example-workspace-rs/compare/glennib-theserver-v0.1.2...glennib-theserver-v0.1.3) - 2024-04-25
+
+### Other
+- move next_prime into blocking task
+
 ## [0.1.2](https://github.com/glennib/example-workspace-rs/compare/glennib-theserver-v0.1.1...glennib-theserver-v0.1.2) - 2024-04-25
 
 ### Added
