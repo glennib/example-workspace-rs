@@ -31,7 +31,8 @@ async fn main() -> anyhow::Result<()> {
         .route("/is_prime/:n", get(handle_is_prime))
         .route("/next_prime/:n", get(handle_next_prime))
         .route("/not_prime/:n", get(handle_not_prime))
-        .route("/ping", get(handle_ping));
+        .route("/ping", get(handle_ping))
+        .route("/succ/:n", get(handle_succ));
 
     let listener = tokio::net::TcpListener::bind((cli.interface.as_str(), cli.port))
         .await
@@ -68,4 +69,9 @@ async fn handle_not_prime(Path(n): Path<u64>) -> &'static str {
 #[instrument]
 async fn handle_ping() -> &'static str {
     "pong"
+}
+
+#[instrument]
+async fn handle_succ(Path(n): Path<u64>) -> String {
+    thelib::succ(n).to_string()
 }
