@@ -1,4 +1,4 @@
-//! Contains functionality for working with prime numbers.
+//! Contains functionality for working with numbers.
 
 /// Returns `true` if the given number is prime, `false` otherwise.
 ///
@@ -29,6 +29,11 @@ pub fn next_prime(n: u64) -> u64 {
 /// Returns false if the given number is prime, true otherwise.
 pub fn not_prime(n: u64) -> bool {
     !is_prime(n)
+}
+
+/// Returns the successor of the given number.
+pub fn succ(n: u64) -> u64 {
+    n + 1
 }
 
 #[cfg(test)]
