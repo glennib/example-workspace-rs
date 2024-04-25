@@ -1,6 +1,6 @@
 [package]
 name = "glennib-thelib"
-version = "0.1.1"
+version = "0.1.2"
 edition = "2021"
 authors = ["Glenn Bitar <glennbitar@gmail.com>"]
 description = "Test library for testing release-plz"
