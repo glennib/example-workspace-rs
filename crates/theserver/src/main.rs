@@ -30,7 +30,8 @@ async fn main() -> anyhow::Result<()> {
     let app = Router::new()
         .route("/is_prime/:n", get(handle_is_prime))
         .route("/next_prime/:n", get(handle_next_prime))
-        .route("/not_prime/:n", get(handle_not_prime));
+        .route("/not_prime/:n", get(handle_not_prime))
+        .route("/ping", get(handle_ping));
 
     let listener = tokio::net::TcpListener::bind((cli.interface.as_str(), cli.port))
         .await
@@ -62,4 +63,9 @@ async fn handle_not_prime(Path(n): Path<u64>) -> &'static str {
         .await
         .expect("we can always spawn task");
     if not_prime { "true" } else { "false" }
+}
+
+#[instrument]
+async fn handle_ping() -> &'static str {
+    "pong"
 }
