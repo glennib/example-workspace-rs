@@ -283,6 +283,36 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "4271d37baee1b8c7e4b708028c57d816cf9d2434acb33a549475f78c181f6253"
 
 [[package]]
+name = "glennib-thelib"
+version = "0.1.0"
+
+[[package]]
+name = "glennib-theotherserver"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "axum",
+ "clap",
+ "glennib-thelib",
+ "tokio",
+ "tracing",
+ "tracing-subscriber",
+]
+
+[[package]]
+name = "glennib-theserver"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "axum",
+ "clap",
+ "glennib-thelib",
+ "tokio",
+ "tracing",
+ "tracing-subscriber",
+]
+
+[[package]]
 name = "heck"
 version = "0.5.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -715,36 +745,6 @@ name = "sync_wrapper"
 version = "1.0.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "a7065abeca94b6a8a577f9bd45aa0867a2238b74e8eb67cf10d492bc39351394"
-
-[[package]]
-name = "thelib"
-version = "0.1.0"
-
-[[package]]
-name = "theotherserver"
-version = "0.1.0"
-dependencies = [
- "anyhow",
- "axum",
- "clap",
- "thelib",
- "tokio",
- "tracing",
- "tracing-subscriber",
-]
-
-[[package]]
-name = "theserver"
-version = "0.1.0"
-dependencies = [
- "anyhow",
- "axum",
- "clap",
- "thelib",
- "tokio",
- "tracing",
- "tracing-subscriber",
-]
 
 [[package]]
 name = "thread_local"

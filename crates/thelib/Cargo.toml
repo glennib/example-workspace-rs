@@ -1,8 +1,9 @@
 [package]
-name = "thelib"
+name = "glennib-thelib"
 version = "0.1.0"
 edition = "2021"
-#publish = false
+authors = ["Glenn Bitar <glennbitar@gmail.com>"]
+description = "Test library"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
