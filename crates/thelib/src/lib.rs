@@ -1,6 +1,8 @@
 //! Contains functionality for working with prime numbers.
 
 /// Returns `true` if the given number is prime, `false` otherwise.
+/// 
+/// Might block for a while if n is large.
 pub fn is_prime(n: u64) -> bool {
     if n < 2 {
         return false;
