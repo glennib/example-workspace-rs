@@ -29,7 +29,8 @@ async fn main() -> anyhow::Result<()> {
 
     let app = Router::new()
         .route("/is_prime/:n", get(handle_is_prime))
-        .route("/next_prime/:n", get(handle_next_prime));
+        .route("/next_prime/:n", get(handle_next_prime))
+        .route("/not_prime/:n", get(handle_not_prime));
 
     let listener = tokio::net::TcpListener::bind((cli.interface.as_str(), cli.port))
         .await
@@ -53,4 +54,12 @@ async fn handle_is_prime(Path(n): Path<u64>) -> &'static str {
 #[instrument]
 async fn handle_next_prime(Path(n): Path<u64>) -> String {
     thelib::next_prime(n).to_string()
+}
+
+#[instrument]
+async fn handle_not_prime(Path(n): Path<u64>) -> &'static str {
+    let not_prime = tokio::task::spawn_blocking(move || thelib::not_prime(n))
+        .await
+        .expect("we can always spawn task");
+    if not_prime { "true" } else { "false" }
 }
