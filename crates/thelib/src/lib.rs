@@ -1,7 +1,7 @@
 //! Contains functionality for working with prime numbers.
 
 /// Returns `true` if the given number is prime, `false` otherwise.
-/// 
+///
 /// Might block for a while if n is large.
 pub fn is_prime(n: u64) -> bool {
     if n < 2 {
@@ -24,6 +24,11 @@ pub fn next_prime(n: u64) -> u64 {
         n += 1;
     }
     n
+}
+
+/// Returns false if the given number is prime, true otherwise.
+pub fn not_prime(n: u64) -> bool {
+    !is_prime(n)
 }
 
 #[cfg(test)]
@@ -51,7 +56,7 @@ mod test {
             assert_eq!(is_prime(n), expected);
         }
     }
-    
+
     #[test]
     fn next_prime_works() {
         let expectations = [
