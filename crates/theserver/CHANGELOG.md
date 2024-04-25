@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.1](https://github.com/glennib/example-workspace-rs/compare/glennib-theserver-v0.1.0...glennib-theserver-v0.1.1) - 2024-04-25
+
+### Added
+- add ping
+
 ## [0.1.0](https://github.com/glennib/example-workspace-rs/releases/tag/glennib-theserver-v0.1.0) - 2024-04-25
 
 ### Fixed
