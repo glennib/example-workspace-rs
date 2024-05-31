@@ -288,19 +288,6 @@ name = "glennib-thelib"
 version = "0.1.3"
 
 [[package]]
-name = "glennib-theotherserver"
-version = "0.1.0"
-dependencies = [
- "anyhow",
- "axum",
- "clap",
- "glennib-thelib",
- "tokio",
- "tracing",
- "tracing-subscriber",
-]
-
-[[package]]
 name = "glennib-theserver"
 version = "0.1.4"
 dependencies = [
