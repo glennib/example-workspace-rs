@@ -32,6 +32,14 @@ pub fn not_prime(n: u64) -> bool {
 }
 
 /// Returns the successor of the given number.
+///
+/// # Examples
+///
+/// ```
+/// use glennib_thelib::succ;
+/// let n = 41;
+/// assert_eq!(succ(n), 42);
+/// ```
 pub fn succ(n: u64) -> u64 {
     n + 1
 }
