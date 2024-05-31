@@ -18,6 +18,12 @@ pub fn is_prime(n: u64) -> bool {
 }
 
 /// Returns the next prime number after the given number.
+/// 
+/// # Example
+/// ```
+/// use glennib_thelib::next_prime;
+/// assert_eq!(next_prime(7), 11);
+/// ```
 pub fn next_prime(number: u64) -> u64 {
     let mut n = number + 1;
     while !is_prime(n) {
