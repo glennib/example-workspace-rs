@@ -18,8 +18,8 @@ pub fn is_prime(n: u64) -> bool {
 }
 
 /// Returns the next prime number after the given number.
-pub fn next_prime(n: u64) -> u64 {
-    let mut n = n + 1;
+pub fn next_prime(number: u64) -> u64 {
+    let mut n = number + 1;
     while !is_prime(n) {
         n += 1;
     }
