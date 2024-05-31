@@ -40,8 +40,8 @@ pub fn not_prime(n: u64) -> bool {
 /// let n = 41;
 /// assert_eq!(succ(n), 42);
 /// ```
-pub fn succ(n: u64) -> u64 {
-    n + 1
+pub fn succ(number: u64) -> u64 {
+    number + 1
 }
 
 #[cfg(test)]
