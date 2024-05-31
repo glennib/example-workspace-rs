@@ -1,3 +1,7 @@
 [workspace]
 resolver = "2"
-members = ["crates/*"]
+members = [
+    "crates/thelib",
+    "crates/theserver",
+    "crates/theotherserver",
+]
